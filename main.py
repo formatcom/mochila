@@ -37,7 +37,10 @@ ver otras alternativas como R[N][5] para todos los objetos con peso max 5
 for i in range(1, N+1):
     for m in range(1, M+1):
         if DEBUG:
-            print('[', i, m, ']', W[i-1], R[i-1][m-W[i-1]], m-W[i-1], U[i-1] + R[i-1][m-W[i-1]], R[i-1][m], W[i-1] <= m, U[i-1] + R[i-1][m-W[i-1]] > R[i-1][m])
+            print('[', i, m, ']',
+                    W[i-1], R[i-1][m-W[i-1]], m-W[i-1],
+                    U[i-1] + R[i-1][m-W[i-1]], R[i-1][m],
+                    W[i-1] <= m, U[i-1] + R[i-1][m-W[i-1]] > R[i-1][m])
 
         if W[i-1] <= m and U[i-1] + R[i-1][m-W[i-1]] > R[i-1][m]:
             R[i][m] = U[i-1] + R[i-1][m-W[i-1]]
