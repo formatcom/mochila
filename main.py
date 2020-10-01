@@ -3,10 +3,12 @@ W = [  2,  5,  1,  6,  2]
 U = [ 28, 33,  5, 12, 20]
 
 N = len(W)  # numero de objetos
-M = 10      # peso maximo
+M = 5       # peso maximo
 
 # buffer (N+1) x (M+1)
 R = [[0 for m in range(M+1)] for i in range(N+1)]
+
+DEBUG = True
 
 """
 R[x] <- x es el numero de objetos que ha introducido en orden
@@ -34,9 +36,16 @@ ver otras alternativas como R[N][5] para todos los objetos con peso max 5
 
 for i in range(1, N+1):
     for m in range(1, M+1):
+        if DEBUG:
+            print('[', i, m, ']', W[i-1], R[i-1][m-W[i-1]], m-W[i-1], U[i-1] + R[i-1][m-W[i-1]], R[i-1][m], W[i-1] <= m, U[i-1] + R[i-1][m-W[i-1]] > R[i-1][m])
         if W[i-1] <= m and U[i-1] + R[i-1][m-W[i-1]] > R[i-1][m]:
             R[i][m] = U[i-1] + R[i-1][m-W[i-1]]
         else:
             R[i][m] = R[i-1][m]
+
+if DEBUG:
+    for t in R:
+        print(t)
+    print()
 
 print(R[N][M])
