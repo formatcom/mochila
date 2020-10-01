@@ -29,6 +29,9 @@ U = [ 28, 33,  5, 12, 20]
 N = len(W)  # numero de objetos
 M = 5       # peso maximo
 
+# C1 =  W <= m
+# C2 =  R > RU
+
   i m   W  R  rm Um RU    C1    C2
 [ 1 1 ] 2  0  -1 28  0 False  True
 [ 1 2 ] 2  0   0 28  0  True  True
