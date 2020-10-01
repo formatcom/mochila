@@ -53,8 +53,8 @@ M = 5       # peso maximo
 [ 5 1 ] 2 33 -1 53  5 False  True
 [ 5 2 ] 2  0  0 20 28  True False
 [ 5 3 ] 2  5  1 25 33  True False
-[ 5 4 ] 2 28  2 48 33  True True
-[ 5 5 ] 2 33  3 53 33  True True
+[ 5 4 ] 2 28  2 48 33  True  True
+[ 5 5 ] 2 33  3 53 33  True  True
 
 [0, 0,  0,  0,  0,  0]
 [0, 0, 28, 28, 28, 28]
